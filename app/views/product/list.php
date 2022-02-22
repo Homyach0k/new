@@ -15,7 +15,7 @@
             по спаданню кількості
         </option>
     </select>
-    <input type="submit" value="Submit">
+    <input type="submit" value="Відсортувати">
 </form>
 
 <div class="product">
@@ -24,6 +24,7 @@
 
 <?php
 $products =  $this->get('products');
+
 
 foreach($products as $product)  :
 ?>

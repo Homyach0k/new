@@ -52,7 +52,7 @@ class DB
         $dbh = $this->getConnection();
         $stmt = $dbh->prepare($sql);
         $result = $stmt->execute($parameters);
-
+        var_dump($stmt);
         if ($result !== false) {
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         } else {

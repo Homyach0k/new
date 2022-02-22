@@ -5,14 +5,13 @@ declare(strict_types=1);
 namespace Controllers;
 
 use Core\Controller;
-use Core\View;
+
 
 /**
  * Class ProductController
  */
 class ProductController extends Controller
 {
-
     /**
      * Product index action that shows product list
      * 
@@ -92,8 +91,8 @@ class ProductController extends Controller
         $model = $this->getModel('Product');
         $this->set("title", "Додавання товару");
         if ($values = $model->getPostValues()) {
-            $model->addItem($values);
-        }
+            $model->addItem($values); 
+        } 
         $this->renderLayout();
     }
 
@@ -169,5 +168,38 @@ class ProductController extends Controller
          */
         return filter_input(INPUT_GET, 'id');
     }
-
+    /*
+     * return array
+     * get add product data
+     */
+ /*   public function addData()
+    {
+        if (!empty(filter_input(INPUT_POST, 'sku'))) {
+            $dataitem[] = filter_input(INPUT_POST, 'sku');
+        }
+        if (!empty(filter_input(INPUT_POST, 'name'))) {
+            $dataitem[] = filter_input(INPUT_POST, 'name');
+        }
+        if (!empty(filter_input(INPUT_POST, 'price'))) {
+            $dataitem[] = filter_input(INPUT_POST, 'price');
+        }
+        if (!empty(filter_input(INPUT_POST, 'qty'))) {
+            $dataitem[] =  filter_input(INPUT_POST, 'qty');
+        }
+        $dataitem[] = filter_input(INPUT_POST, 'description');
+        
+        return $dataitem;
+    }
+   public function deleteId() : int
+    {
+        if (filter_input(INPUT_POST, 'name'==1) {
+            
+        
+            
+     //   }
+        // якщо видалення - відправка данних моделі для видалення 
+        // ріроут на сторінку товарів
+        // елс
+        // ріроут на сторінку товарів
+    } */
 }

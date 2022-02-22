@@ -39,6 +39,8 @@ abstract class Model implements DbModelInterface
      * @var array
      */
     protected $params = [];
+    
+    protected $dataitem = [];
 
     /**
      * @return $this
@@ -71,10 +73,7 @@ abstract class Model implements DbModelInterface
      */
     public function sort($params)
     {
-        /*
-          TODO
-          return $this;
-         */
+        
         return $this;
     }
 
@@ -167,5 +166,19 @@ abstract class Model implements DbModelInterface
     {
         return 1;
     }
-
+ /*
+    private function addItem ()
+    {
+        $db = new DB();
+        $sql = "INSERT INTO `products` (`id`, `sku`, `name`, `price`, `qty`, `description`) VALUES " ;
+        $db->query($sql, $this->addData());
+    return void;
+    }
+   
+    private function deleteItem ()
+    {
+        $db = new DB();
+        $sql = "DELETE FROM `products` WHERE `products`.`id` = getID();";
+        $db->query($sql);
+    } */
 }
